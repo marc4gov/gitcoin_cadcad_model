@@ -7,9 +7,9 @@ import matplotlib.patches as mpatches
 import networkx as nx
 import cv2
 from tqdm.auto import tqdm
+from typing import Optional
 
-
-def load_contributions_sequence_from_csv(path: str, limit: int=None) -> dict:
+def load_contributions_sequence_from_csv(path: str, limit: Optional[int]) -> dict:
     df = pd.read_csv(path)
     if limit is not None:
         df = df.head(limit)

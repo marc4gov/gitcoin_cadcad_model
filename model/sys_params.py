@@ -7,6 +7,7 @@ CSV_PATH = 'model/data/data.csv.xz'
 EXCEL_PATH = 'model/data/alternate_data.xls'
 load_from_excel: str = os.environ.get('GITCOIN_LOAD_EXCEL')
     
+timesteps = 0
 if load_from_excel == 'yes':
     CONTRIBUTIONS_SEQUENCE = load_contributions_sequence_from_excel(EXCEL_PATH)
 else:
